@@ -14,266 +14,565 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
+      background: #f8fafc;
+      color: #1e293b;
       line-height: 1.6;
     }
 
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e2e8f0;
+      padding: 14px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h2 {
+      color: #7c3aed;
+      font-size: 22px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+    }
+
     header {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      padding: 60px 20px;
+      background: linear-gradient(135deg, #7c3aed, #06b6d4, #ec4899);
+      color: white;
+      padding: 90px 20px 70px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      color: #38bdf8;
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    header h3 {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 18px;
     }
 
     header p {
-      font-size: 20px;
-      color: #cbd5e1;
-      margin-bottom: 20px;
+      max-width: 820px;
+      margin: 0 auto;
+      font-size: 18px;
     }
 
-    .buttons a {
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .hero-buttons a {
       display: inline-block;
-      margin: 10px;
+      margin: 8px;
       padding: 12px 22px;
-      border-radius: 8px;
+      border-radius: 999px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
-    .btn1 {
-      background: #38bdf8;
-      color: #0f172a;
+    .btn-white {
+      background: white;
+      color: #7c3aed;
     }
 
-    .btn2 {
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
     }
 
-    .buttons a:hover {
-      opacity: 0.85;
+    .hero-buttons a:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
     }
 
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 70px 20px;
     }
 
-    h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-      color: #38bdf8;
-      border-bottom: 2px solid #1e293b;
-      display: inline-block;
-      padding-bottom: 8px;
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
     }
 
-    .card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #334155;
-      padding: 10px 14px;
-      margin: 8px 8px 0 0;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    .project {
-      margin-top: 20px;
-      padding: 20px;
-      background: #1e293b;
-      border-left: 4px solid #38bdf8;
-      border-radius: 10px;
-    }
-
-    .project h3 {
-      color: #f8fafc;
+    .section-title h2 {
+      font-size: 34px;
+      color: #7c3aed;
       margin-bottom: 10px;
     }
 
-    .project p {
-      color: #cbd5e1;
+    .section-title p {
+      color: #64748b;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .about-box {
+      font-size: 17px;
+      text-align: center;
+    }
+
+    .skills-grid, .projects-grid, .stats-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin-top: 30px;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, #ffffff, #f8fafc);
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .stat-card h3 {
+      font-size: 28px;
+      color: #7c3aed;
+      margin-bottom: 8px;
+    }
+
+    .stat-card p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .skill-card h3,
+    .project-card h3,
+    .exp-card h3,
+    .edu-card h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .skill-tags span {
+      display: inline-block;
+      background: linear-gradient(135deg, #ede9fe, #cffafe);
+      color: #334155;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin: 6px 6px 0 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      border-top: 5px solid #7c3aed;
+      border: 1px solid #e2e8f0;
+    }
+
+    .project-card p {
+      color: #475569;
+      margin-bottom: 14px;
+    }
+
+    .project-highlights {
+      padding-left: 18px;
+      color: #475569;
+    }
+
+    .project-highlights li {
+      margin-bottom: 8px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 20px;
+    }
+
+    .exp-card, .edu-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      border-left: 5px solid #06b6d4;
+      border: 1px solid #e2e8f0;
+    }
+
+    .date {
+      color: #7c3aed;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     ul {
       padding-left: 20px;
-      margin-top: 10px;
     }
 
     li {
       margin-bottom: 8px;
-      color: #cbd5e1;
+      color: #475569;
+    }
+
+    .cert-list li {
+      background: white;
+      margin-bottom: 12px;
+      border-radius: 14px;
+      padding: 16px 18px;
+      list-style: none;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .contact-box {
+      text-align: center;
+      background: linear-gradient(135deg, #7c3aed, #06b6d4);
+      color: white;
+      border-radius: 24px;
+      padding: 40px 20px;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+      font-size: 17px;
+    }
+
+    .contact-box a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     footer {
       text-align: center;
       padding: 30px 20px;
-      background: #020617;
-      color: #94a3b8;
-      margin-top: 40px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      header h1 {
+        font-size: 36px;
+      }
+
+      header h3 {
+        font-size: 20px;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
 
+  <nav>
+    <h2>Saanvi</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Saanvi Reddy Baradi</h1>
-    <p>Data Analytics and AI Engineer</p>
-    <div class="buttons">
-      <a class="btn1" href="mailto:saanvireddybaradi@usf.edu">Email Me</a>
-      <a class="btn2" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-      <a class="btn2" href="https://github.com/saanvireddy" target="_blank">GitHub</a>
+    <h3>Data Analytics and AI Engineer</h3>
+    <p>
+      Graduate student at the University of South Florida passionate about SQL, Python, BI dashboards, machine learning, NLP, ETL pipelines, and Generative AI. I enjoy building smart data solutions that turn complex information into useful insights.
+    </p>
+    <div class="hero-buttons">
+      <a class="btn-white" href="mailto:saanvireddybaradi@usf.edu">Email Me</a>
+      <a class="btn-outline" href="https://github.com/saanvireddy" target="_blank">GitHub</a>
+      <a class="btn-outline" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
     </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <div class="card">
-      <p>
-        I am a Data Analytics and AI graduate student at the University of South Florida with experience in SQL, Python, Tableau, Power BI, machine learning, NLP, ETL pipelines, and Generative AI. I enjoy building data-driven solutions that turn raw data into meaningful insights for decision-making.
-      </p>
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>A quick introduction to who I am and what I build.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <div class="card skills">
-      <span>SQL</span>
-      <span>Python</span>
-      <span>R</span>
-      <span>Excel</span>
-      <span>Tableau</span>
-      <span>Power BI</span>
-      <span>ETL Pipelines</span>
-      <span>Data Modeling</span>
-      <span>Data Warehousing</span>
-      <span>Exploratory Data Analysis</span>
-      <span>Machine Learning</span>
-      <span>NLP</span>
-      <span>LangChain</span>
-      <span>Vertex AI</span>
-      <span>Prompt Engineering</span>
-      <span>Git</span>
-    </div>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>AI-Powered SQL Analytics Assistant</h3>
+    <div class="card about-box">
       <p>
-        Built an AI-powered self-service BI tool using Vertex AI and LangChain that translates natural language questions into SQL queries. Added schema-aware query generation, SQL validation checks, and automated summaries to improve reliability and usability.
+        I am currently pursuing my Master of Science in Artificial Intelligence and Business Analytics at the University of South Florida with a GPA of 3.95/4.0. My background combines analytics, business intelligence, and AI, with hands-on experience in SQL, Python, Tableau, Power BI, machine learning, NLP, and cloud-based GenAI tools like Vertex AI and LangChain. I love building end-to-end projects that solve real-world problems through data.
       </p>
     </div>
 
-    <div class="project">
-      <h3>Construction Safety Analytics using NLP</h3>
-      <p>
-        Developed an NLP-based analytics pipeline to analyze 500+ unstructured accident reports. Built and evaluated ensemble ML classifiers that achieved 92% accuracy and generated insights that contributed to a 20% reduction in workplace accidents.
-      </p>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>3.95</h3>
+        <p>Graduate GPA at USF</p>
+      </div>
+      <div class="stat-card">
+        <h3>500+</h3>
+        <p>Accident reports analyzed in NLP research</p>
+      </div>
+      <div class="stat-card">
+        <h3>92%</h3>
+        <p>Model accuracy achieved in safety analytics</p>
+      </div>
+      <div class="stat-card">
+        <h3>20%</h3>
+        <p>Reduction in workplace accidents supported by insights</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-title">
+      <h2>Skills</h2>
+      <p>Tools and technologies I use across analytics, AI, and data workflows.</p>
     </div>
 
-    <div class="project">
-      <h3>Country Standardization and Census Data Pipeline</h3>
-      <p>
-        Designed scalable Python pipelines to standardize noisy country names into ISO codes using manual mappings and fuzzy matching. Integrated the U.S. Census Bureau ACS 5-Year API to extract demographic and income data at ZIP, county, and state levels.
-      </p>
+    <div class="skills-grid">
+      <div class="card skill-card">
+        <h3>Programming</h3>
+        <div class="skill-tags">
+          <span>SQL</span>
+          <span>Python</span>
+          <span>R</span>
+          <span>Excel</span>
+        </div>
+      </div>
+
+      <div class="card skill-card">
+        <h3>BI and Visualization</h3>
+        <div class="skill-tags">
+          <span>Tableau</span>
+          <span>Power BI</span>
+          <span>Looker</span>
+          <span>ArcGIS</span>
+        </div>
+      </div>
+
+      <div class="card skill-card">
+        <h3>AI and Machine Learning</h3>
+        <div class="skill-tags">
+          <span>Machine Learning</span>
+          <span>NLP</span>
+          <span>LangChain</span>
+          <span>Vertex AI</span>
+          <span>Prompt Engineering</span>
+          <span>Embeddings</span>
+        </div>
+      </div>
+
+      <div class="card skill-card">
+        <h3>Data Engineering</h3>
+        <div class="skill-tags">
+          <span>ETL Pipelines</span>
+          <span>Data Modeling</span>
+          <span>Data Warehousing</span>
+          <span>Pandas</span>
+          <span>API Data Extraction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-title">
+      <h2>Featured Projects</h2>
+      <p>Projects that reflect my experience in GenAI, NLP, machine learning, and analytics engineering.</p>
     </div>
 
-    <div class="project">
-      <h3>Multiple Disease Prediction using ML</h3>
-      <p>
-        Developed and evaluated classification models for diabetes, heart disease, and Parkinson’s prediction using feature engineering and standard performance metrics to compare predictive accuracy and generalization.
-      </p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>AI-Powered SQL Analytics Assistant</h3>
+        <p>
+          Built an AI-powered self-service BI tool using Vertex AI and LangChain that converts natural language questions into SQL queries for easier report generation.
+        </p>
+        <ul class="project-highlights">
+          <li>Implemented schema-aware query generation using metadata and sample rows</li>
+          <li>Added prompt strategies and SQL validation checks to reduce errors</li>
+          <li>Improved self-service analytics for non-technical users</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Construction Safety Analytics using NLP</h3>
+        <p>
+          Developed an NLP-based analytics pipeline to analyze construction accident and incident reports and identify high-risk scenarios.
+        </p>
+        <ul class="project-highlights">
+          <li>Processed 500+ unstructured accident reports</li>
+          <li>Developed ensemble ML classifiers with 92% accuracy</li>
+          <li>Generated insights that contributed to a 20% reduction in workplace accidents</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Country Standardization and Census Data Pipeline</h3>
+        <p>
+          Designed scalable Python pipelines to standardize country names into ISO codes using manual mappings and fuzzy matching logic.
+        </p>
+        <ul class="project-highlights">
+          <li>Tested 180+ country-name variations</li>
+          <li>Used override dictionaries for complex geopolitical edge cases</li>
+          <li>Integrated U.S. Census Bureau ACS 5-Year API for demographic and income data extraction</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Multiple Disease Prediction using ML</h3>
+        <p>
+          Built and evaluated machine learning models for diabetes, heart disease, and Parkinson’s prediction using feature engineering and performance comparison.
+        </p>
+        <ul class="project-highlights">
+          <li>Compared multiple classification algorithms</li>
+          <li>Used standard performance metrics for validation</li>
+          <li>Analyzed predictive accuracy and generalization across datasets</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-title">
+      <h2>Experience</h2>
+      <p>Hands-on work in analytics, data science, reporting, and AI-driven data preparation.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="exp-card">
+        <div class="date">Feb 2025 to Sep 2025</div>
+        <h3>Project Assistant | University of South Florida</h3>
+        <ul>
+          <li>Designed country name standardization logic using manual mappings and fuzzy matching to convert noisy inputs into ISO codes</li>
+          <li>Evaluated pycountry and rapidfuzz against custom logic using 180+ country-name variations</li>
+          <li>Built scalable Python pipelines to compare multiple country-code generation approaches and flag mismatches</li>
+          <li>Integrated the U.S. Census Bureau ACS 5-Year API to extract demographic and income data at ZIP, county, and state levels</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="date">Jun 2023 to May 2024</div>
+        <h3>Data Science Intern | Accenture</h3>
+        <ul>
+          <li>Supported machine learning initiatives through data preprocessing, feature preparation, and exploratory data analysis</li>
+          <li>Designed SQL-driven Tableau dashboards to visualize ML insights and analytical results for business stakeholders</li>
+          <li>Developed SQL-based reports to communicate operational trends and actionable recommendations</li>
+          <li>Collaborated with analytics and engineering teams to improve data quality and feature consistency</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="date">Jun 2022 to Jun 2023</div>
+        <h3>Research Assistant | MRECW</h3>
+        <ul>
+          <li>Applied NLP techniques to analyze 500+ unstructured accident reports</li>
+          <li>Developed and evaluated ensemble ML classifiers achieving 92% accuracy</li>
+          <li>Generated data-driven insights contributing to a 20% reduction in reported workplace accidents</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="section-title">
+      <h2>Education</h2>
+      <p>My academic background in AI, analytics, and data science.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="edu-card">
+        <div class="date">Aug 2024 to May 2026</div>
+        <h3>University of South Florida</h3>
+        <p><strong>Master of Science in Artificial Intelligence and Business Analytics</strong></p>
+        <p>GPA: 3.95 / 4.0</p>
+        <p>
+          Coursework: Machine Learning, Business Statistics, Advanced Database Management Systems, Data Visualization, Big Data Analytics, Data Warehousing, Application Development for Analytics
+        </p>
+      </div>
+
+      <div class="edu-card">
+        <div class="date">Jun 2020 to Apr 2024</div>
+        <h3>Malla Reddy Engineering College for Women</h3>
+        <p><strong>Bachelor of Technology in Computer Science Engineering - Data Science</strong></p>
+        <p>GPA: 3.7 / 4.0</p>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Experience</h2>
-    <div class="card">
-      <h3>Project Assistant, University of South Florida</h3>
-      <p>Feb 2025 to Sep 2025</p>
-      <ul>
-        <li>Built Python pipelines for country-code generation and mismatch detection.</li>
-        <li>Evaluated pycountry and rapidfuzz using 180+ country-name variations.</li>
-        <li>Prepared analysis-ready data outputs for BI and reporting workflows.</li>
-      </ul>
+    <div class="section-title">
+      <h2>Certifications</h2>
+      <p>Certifications that support my analytics and technical foundation.</p>
     </div>
 
-    <div class="card">
-      <h3>Data Science Intern, Accenture</h3>
-      <p>Jun 2023 to May 2024</p>
-      <ul>
-        <li>Performed preprocessing, feature preparation, and exploratory data analysis.</li>
-        <li>Built SQL-driven Tableau dashboards for business stakeholders.</li>
-        <li>Created reports to communicate operational trends and recommendations.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Research Assistant, MRECW</h3>
-      <p>Jun 2022 to Jun 2023</p>
-      <ul>
-        <li>Applied NLP methods on unstructured accident reports.</li>
-        <li>Built ensemble classifiers with 92% accuracy.</li>
-        <li>Generated insights that supported workplace safety improvements.</li>
-      </ul>
-    </div>
+    <ul class="cert-list">
+      <li>Microsoft Power BI Data Analyst (PL-300)</li>
+      <li>Data Science Fundamentals with Python and SQL – IBM</li>
+      <li>Introduction to Data Science – IBM</li>
+      <li>Programming Essentials in Python – Cisco</li>
+      <li>Python (Basic) – HackerRank</li>
+    </ul>
   </section>
 
-  <section>
-    <h2>Education</h2>
-    <div class="card">
-      <h3>University of South Florida</h3>
-      <p>Master of Science in Artificial Intelligence and Business Analytics</p>
-      <p>Aug 2024 to May 2026 | GPA: 3.95 / 4.0</p>
-      <br>
-      <h3>Malla Reddy Engineering College for Women</h3>
-      <p>Bachelor of Technology in Computer Science Engineering - Data Science</p>
-      <p>Jun 2020 to Apr 2024 | GPA: 3.7 / 4.0</p>
+  <section id="contact">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Let’s connect for internships, full-time opportunities, and collaborations.</p>
     </div>
-  </section>
 
-  <section>
-    <h2>Certifications</h2>
-    <div class="card">
-      <ul>
-        <li>Microsoft Power BI Data Analyst (PL-300)</li>
-        <li>Data Science Fundamentals with Python and SQL – IBM</li>
-        <li>Introduction to Data Science – IBM</li>
-        <li>Programming Essentials in Python – Cisco</li>
-        <li>Python (Basic) – HackerRank</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <div class="card">
-      <p>Email: saanvireddybaradi@usf.edu</p>
-      <p>GitHub: github.com/saanvireddy</p>
-      <p>LinkedIn: Add your LinkedIn profile link here</p>
+    <div class="contact-box">
+      <p><strong>Email:</strong> <a href="mailto:saanvireddybaradi@usf.edu">saanvireddybaradi@usf.edu</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/saanvireddy" target="_blank">github.com/saanvireddy</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank">Add your real LinkedIn URL here</a></p>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Saanvi Reddy Baradi | Portfolio</p>
+    © 2026 Saanvi Reddy Baradi | Portfolio
   </footer>
 
 </body>
