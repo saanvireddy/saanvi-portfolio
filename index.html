@@ -11,14 +11,14 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
-
+ 
     body {
       font-family: Arial, sans-serif;
       background: #f8fafc;
       color: #1e293b;
       line-height: 1.6;
     }
-
+ 
     nav {
       position: sticky;
       top: 0;
@@ -31,58 +31,58 @@
       justify-content: space-between;
       align-items: center;
     }
-
+ 
     nav h2 {
       color: #7c3aed;
       font-size: 22px;
     }
-
+ 
     nav ul {
       list-style: none;
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
     }
-
+ 
     nav a {
       text-decoration: none;
       color: #334155;
       font-weight: 600;
       font-size: 14px;
     }
-
+ 
     nav a:hover {
       color: #7c3aed;
     }
-
+ 
     header {
       background: linear-gradient(135deg, #7c3aed, #06b6d4, #ec4899);
       color: white;
       padding: 90px 20px 70px;
       text-align: center;
     }
-
+ 
     header h1 {
       font-size: 48px;
       margin-bottom: 12px;
     }
-
+ 
     header h3 {
       font-size: 24px;
       font-weight: normal;
       margin-bottom: 18px;
     }
-
+ 
     header p {
       max-width: 820px;
       margin: 0 auto;
       font-size: 18px;
     }
-
+ 
     .hero-buttons {
       margin-top: 30px;
     }
-
+ 
     .hero-buttons a {
       display: inline-block;
       margin: 8px;
@@ -92,45 +92,45 @@
       font-weight: bold;
       transition: 0.3s ease;
     }
-
+ 
     .btn-white {
       background: white;
       color: #7c3aed;
     }
-
+ 
     .btn-outline {
       border: 2px solid white;
       color: white;
     }
-
+ 
     .hero-buttons a:hover {
       transform: translateY(-2px);
       opacity: 0.92;
     }
-
+ 
     section {
       max-width: 1100px;
       margin: auto;
       padding: 70px 20px;
     }
-
+ 
     .section-title {
       text-align: center;
       margin-bottom: 35px;
     }
-
+ 
     .section-title h2 {
       font-size: 34px;
       color: #7c3aed;
       margin-bottom: 10px;
     }
-
+ 
     .section-title p {
       color: #64748b;
       max-width: 700px;
       margin: auto;
     }
-
+ 
     .card {
       background: white;
       border-radius: 18px;
@@ -138,30 +138,30 @@
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
       border: 1px solid #e2e8f0;
     }
-
+ 
     .about-box {
       font-size: 17px;
       text-align: center;
     }
-
+ 
     .skills-grid, .projects-grid, .stats-grid {
       display: grid;
       gap: 20px;
     }
-
+ 
     .skills-grid {
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
-
+ 
     .projects-grid {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-
+ 
     .stats-grid {
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       margin-top: 30px;
     }
-
+ 
     .stat-card {
       background: linear-gradient(135deg, #ffffff, #f8fafc);
       border-radius: 18px;
@@ -170,18 +170,18 @@
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
       border: 1px solid #e2e8f0;
     }
-
+ 
     .stat-card h3 {
       font-size: 28px;
       color: #7c3aed;
       margin-bottom: 8px;
     }
-
+ 
     .stat-card p {
       color: #64748b;
       font-size: 14px;
     }
-
+ 
     .skill-card h3,
     .project-card h3,
     .exp-card h3,
@@ -189,8 +189,9 @@
       margin-bottom: 10px;
       color: #0f172a;
     }
-
-    .skill-tags span {
+ 
+    .skill-tags span,
+    .tech-tags span {
       display: inline-block;
       background: linear-gradient(135deg, #ede9fe, #cffafe);
       color: #334155;
@@ -200,7 +201,20 @@
       font-size: 14px;
       font-weight: 600;
     }
-
+ 
+    .tech-tags {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #e2e8f0;
+    }
+ 
+    .tech-tags span {
+      background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+      color: #166534;
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+ 
     .project-card {
       background: white;
       border-radius: 18px;
@@ -208,27 +222,56 @@
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
       border-top: 5px solid #7c3aed;
       border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
     }
-
+ 
     .project-card p {
       color: #475569;
       margin-bottom: 14px;
     }
-
+ 
     .project-highlights {
       padding-left: 18px;
       color: #475569;
+      flex-grow: 1;
     }
-
+ 
     .project-highlights li {
       margin-bottom: 8px;
     }
-
+ 
+    .project-footer {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+ 
+    .project-footer a {
+      color: #7c3aed;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+    }
+ 
+    .project-footer a:hover {
+      text-decoration: underline;
+    }
+ 
+    .no-link {
+      color: #94a3b8;
+      font-size: 13px;
+      font-style: italic;
+    }
+ 
     .timeline {
       display: grid;
       gap: 20px;
     }
-
+ 
     .exp-card, .edu-card {
       background: white;
       border-radius: 18px;
@@ -237,22 +280,22 @@
       border-left: 5px solid #06b6d4;
       border: 1px solid #e2e8f0;
     }
-
+ 
     .date {
       color: #7c3aed;
       font-weight: bold;
       margin-bottom: 10px;
     }
-
+ 
     ul {
       padding-left: 20px;
     }
-
+ 
     li {
       margin-bottom: 8px;
       color: #475569;
     }
-
+ 
     .cert-list li {
       background: white;
       margin-bottom: 12px;
@@ -262,7 +305,7 @@
       box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
       border: 1px solid #e2e8f0;
     }
-
+ 
     .contact-box {
       text-align: center;
       background: linear-gradient(135deg, #7c3aed, #06b6d4);
@@ -270,39 +313,51 @@
       border-radius: 24px;
       padding: 40px 20px;
     }
-
+ 
     .contact-box p {
       margin: 10px 0;
       font-size: 17px;
     }
-
+ 
     .contact-box a {
       color: white;
       font-weight: bold;
       text-decoration: none;
     }
-
+ 
+    .opt-badge {
+      display: inline-block;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+ 
     footer {
       text-align: center;
       padding: 30px 20px;
       color: #64748b;
       font-size: 14px;
     }
-
+ 
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
         gap: 12px;
       }
-
+ 
       header h1 {
         font-size: 36px;
       }
-
+ 
       header h3 {
         font-size: 20px;
       }
-
+ 
       nav ul {
         justify-content: center;
       }
@@ -310,7 +365,7 @@
   </style>
 </head>
 <body>
-
+ 
   <nav>
     <h2>Saanvi Reddy Baradi</h2>
     <ul>
@@ -322,10 +377,10 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
+ 
   <header>
     <h1>Saanvi Reddy Baradi</h1>
-    <h3>Data Analytics & AI Engineer | SQL | Python | ML | GenAI</h3>
+    <h3>Data Analyst | Data Scientist | Analytics Engineer | ML · NLP · GenAI</h3>
     <p>
       Graduate student at the University of South Florida passionate about SQL, Python, BI dashboards, machine learning, NLP, ETL pipelines, and Generative AI. I enjoy building smart data solutions that turn complex information into useful insights.
     </p>
@@ -333,10 +388,10 @@
       <a class="btn-white" href="mailto:saanvireddybaradi@usf.edu">Email Me</a>
       <a class="btn-outline" href="https://github.com/saanvireddy" target="_blank">GitHub</a>
       <a class="btn-outline" href="https://www.linkedin.com/in/saanvi-reddy-baradi/" target="_blank">LinkedIn</a>
-      <a class="btn-white" href="Saanvi_Reddy_Baradi (6).pdf" target="_blank">Download Resume</a>
+      <a class="btn-white" href="Saanvi_Reddy_Baradi" target="_blank">Download Resume</a>
     </div>
   </header>
-
+ 
   <section id="about">
     <div class="section-title">
       <h2>About Me</h2>
@@ -347,7 +402,7 @@
         I am currently pursuing my Master of Science in Artificial Intelligence and Business Analytics at the University of South Florida with a GPA of 3.95/4.0. My background combines analytics, business intelligence, and AI, with hands-on experience in SQL, Python, Tableau, Power BI, machine learning, NLP, and cloud-based GenAI tools like Vertex AI and LangChain. I love building end-to-end projects that solve real-world problems through data.
       </p>
     </div>
-
+ 
     <div class="stats-grid">
       <div class="stat-card">
         <h3>3.95</h3>
@@ -367,13 +422,13 @@
       </div>
     </div>
   </section>
-  
+ 
   <section id="skills">
     <div class="section-title">
       <h2>Skills</h2>
       <p>Tools and technologies I use across analytics, AI, and data workflows.</p>
     </div>
-
+ 
     <div class="skills-grid">
       <div class="card skill-card">
         <h3>Programming</h3>
@@ -384,7 +439,7 @@
           <span>Excel</span>
         </div>
       </div>
-
+ 
       <div class="card skill-card">
         <h3>BI and Visualization</h3>
         <div class="skill-tags">
@@ -394,7 +449,7 @@
           <span>ArcGIS</span>
         </div>
       </div>
-
+ 
       <div class="card skill-card">
         <h3>AI and Machine Learning</h3>
         <div class="skill-tags">
@@ -406,7 +461,7 @@
           <span>Embeddings</span>
         </div>
       </div>
-
+ 
       <div class="card skill-card">
         <h3>Data Engineering</h3>
         <div class="skill-tags">
@@ -419,75 +474,91 @@
       </div>
     </div>
   </section>
-
+ 
   <section id="projects">
     <div class="section-title">
       <h2>Featured Projects</h2>
       <p>Projects that reflect my experience in GenAI, NLP, machine learning, and analytics engineering.</p>
     </div>
-
+ 
     <div class="projects-grid">
+ 
       <div class="project-card">
         <h3>AI-Powered SQL Analytics Assistant</h3>
-        <p>
-          Built an AI-powered self-service BI tool using Vertex AI and LangChain that converts natural language questions into SQL queries for easier report generation.
-        </p>
+        <p>Built an AI-powered self-service BI tool using Vertex AI and LangChain that converts natural language questions into SQL queries for easier report generation.</p>
         <ul class="project-highlights">
-          <li>Implemented schema-aware query generation using metadata and sample rows</li>
-          <li>Added prompt strategies and SQL validation checks to reduce errors</li>
-          <li>Improved self-service analytics for non-technical users</li>
+          <li>Implemented schema-aware query generation using database metadata and sample rows</li>
+          <li>Added prompt strategies and SQL validation checks to reduce hallucinations</li>
+          <li>Developed automated result summarization for non-technical business users</li>
         </ul>
-        <a href="https://github.com/saanvireddy/ai-sql-assistant" target="_blank">View Project →</a>
+        <div class="tech-tags">
+          <span>Python</span><span>Vertex AI (Gemini)</span><span>LangChain</span><span>SQL</span><span>Prompt Engineering</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/saanvireddy/ai-sql-assistant" target="_blank">View on GitHub →</a>
+        </div>
       </div>
-
+ 
       <div class="project-card">
         <h3>Construction Safety Analytics using NLP</h3>
-        <p>
-          Developed an NLP-based analytics pipeline to analyze construction accident and incident reports and identify high-risk scenarios.
-        </p>
+        <p>Developed an NLP-based analytics pipeline to analyze construction accident and incident reports and identify high-risk scenarios.</p>
         <ul class="project-highlights">
-          <li>Processed 500+ unstructured accident reports</li>
-          <li>Developed ensemble ML classifiers with 92% accuracy</li>
-          <li>Generated insights that contributed to a 20% reduction in workplace accidents</li>
+          <li>Processed 500+ unstructured accident reports using text preprocessing and feature extraction</li>
+          <li>Developed ensemble ML classifiers achieving 92% accuracy</li>
+          <li>Generated insights contributing to a 20% reduction in workplace accidents</li>
         </ul>
-        <a href="https://github.com/saanvireddy/Construction-site-acciedent-analysis" target="_blank">View Project →</a>
+        <div class="tech-tags">
+          <span>Python</span><span>NLP</span><span>Scikit-learn</span><span>Ensemble Methods</span><span>Text Preprocessing</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/saanvireddy/Construction-site-acciedent-analysis" target="_blank">View on GitHub →</a>
+        </div>
       </div>
-
+ 
       <div class="project-card">
-        <h3>Country Standardization and Census Data Pipeline</h3>
-        <p>
-          Designed scalable Python pipelines to standardize country names into ISO codes using manual mappings and fuzzy matching logic.
-        </p>
+        <h3>Country Standardization & Census Data Pipeline</h3>
+        <p>Designed scalable Python ETL pipelines to standardize country names into ISO codes using fuzzy matching logic and extracted U.S. demographic data via API.</p>
         <ul class="project-highlights">
-          <li>Tested 180+ country-name variations</li>
-          <li>Used override dictionaries for complex geopolitical edge cases</li>
-          <li>Integrated U.S. Census Bureau ACS 5-Year API for demographic and income data extraction</li>
+          <li>Benchmarked pycountry and rapidfuzz across 180+ country-name variations</li>
+          <li>Built override dictionaries for complex geopolitical edge cases (EU, USSR, UAE)</li>
+          <li>Integrated U.S. Census Bureau ACS 5-Year API for ZIP, county, and state-level data extraction</li>
         </ul>
+        <div class="tech-tags">
+          <span>Python</span><span>Pandas</span><span>Fuzzy Matching</span><span>REST API</span><span>ETL</span><span>Tableau</span>
+        </div>
+        <div class="project-footer">
+          <span class="no-link">University Research Project</span>
+        </div>
       </div>
-
+ 
       <div class="project-card">
         <h3>Multiple Disease Prediction using ML</h3>
-        <p>
-          Built and evaluated machine learning models for diabetes, heart disease, and Parkinson’s prediction using feature engineering and performance comparison.
-        </p>
+        <p>Built and evaluated machine learning models for diabetes, heart disease, and Parkinson's prediction using feature engineering and algorithm comparison.</p>
         <ul class="project-highlights">
-          <li>Compared multiple classification algorithms</li>
-          <li>Used standard performance metrics for validation</li>
-          <li>Analyzed predictive accuracy and generalization across datasets</li>
+          <li>Compared Logistic Regression, Random Forest, SVM, and ensemble methods</li>
+          <li>Performed feature engineering and cross-validation across all models</li>
+          <li>Evaluated using accuracy, precision, recall, and AUC-ROC metrics</li>
         </ul>
+        <div class="tech-tags">
+          <span>Python</span><span>Scikit-learn</span><span>Feature Engineering</span><span>Classification</span><span>AUC-ROC</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/saanvireddy/Heart-Disease-Diagnostic-Analysis" target="_blank">View on GitHub →</a>
+        </div>
       </div>
+ 
     </div>
   </section>
-
+ 
   <section id="experience">
     <div class="section-title">
       <h2>Experience</h2>
       <p>Hands-on work in analytics, data science, reporting, and AI-driven data preparation.</p>
     </div>
-
+ 
     <div class="timeline">
       <div class="exp-card">
-        <div class="date">Feb 2025 to Sep 2025</div>
+        <div class="date">Feb 2025 – Sep 2025</div>
         <h3>Project Assistant | University of South Florida</h3>
         <ul>
           <li>Designed country name standardization logic using manual mappings and fuzzy matching to convert noisy inputs into ISO codes</li>
@@ -496,9 +567,9 @@
           <li>Integrated the U.S. Census Bureau ACS 5-Year API to extract demographic and income data at ZIP, county, and state levels</li>
         </ul>
       </div>
-
+ 
       <div class="exp-card">
-        <div class="date">Jun 2023 to May 2024</div>
+        <div class="date">Jun 2023 – May 2024</div>
         <h3>Data Science Intern | Accenture</h3>
         <ul>
           <li>Supported machine learning initiatives through data preprocessing, feature preparation, and exploratory data analysis</li>
@@ -507,9 +578,9 @@
           <li>Collaborated with analytics and engineering teams to improve data quality and feature consistency</li>
         </ul>
       </div>
-
+ 
       <div class="exp-card">
-        <div class="date">Jun 2022 to Jun 2023</div>
+        <div class="date">Jun 2022 – Jun 2023</div>
         <h3>Research Assistant | MRECW</h3>
         <ul>
           <li>Applied NLP techniques to analyze 500+ unstructured accident reports</li>
@@ -519,64 +590,63 @@
       </div>
     </div>
   </section>
-
+ 
   <section id="education">
     <div class="section-title">
       <h2>Education</h2>
       <p>My academic background in AI, analytics, and data science.</p>
     </div>
-
+ 
     <div class="timeline">
       <div class="edu-card">
-        <div class="date">Aug 2024 to May 2026</div>
+        <div class="date">Aug 2024 – May 2026</div>
         <h3>University of South Florida</h3>
         <p><strong>Master of Science in Artificial Intelligence and Business Analytics</strong></p>
         <p>GPA: 3.95 / 4.0</p>
-        <p>
-          Coursework: Machine Learning, Business Statistics, Advanced Database Management Systems, Data Visualization, Big Data Analytics, Data Warehousing, Application Development for Analytics
-        </p>
+        <p>Coursework: Machine Learning, Business Statistics, Advanced Database Management Systems, Data Visualization, Big Data Analytics, Data Warehousing, Application Development for Analytics</p>
       </div>
-
+ 
       <div class="edu-card">
-        <div class="date">Jun 2020 to Apr 2024</div>
+        <div class="date">Jun 2020 – Apr 2024</div>
         <h3>Malla Reddy Engineering College for Women</h3>
         <p><strong>Bachelor of Technology in Computer Science Engineering - Data Science</strong></p>
         <p>GPA: 3.7 / 4.0</p>
       </div>
     </div>
   </section>
-
+ 
   <section>
     <div class="section-title">
       <h2>Certifications</h2>
       <p>Certifications that support my analytics and technical foundation.</p>
     </div>
-
+ 
     <ul class="cert-list">
-      <li>Microsoft Power BI Data Analyst (PL-300)</li>
+      <li>Microsoft Power BI Data Analyst (PL-300) – Microsoft</li>
       <li>Data Science Fundamentals with Python and SQL – IBM</li>
       <li>Introduction to Data Science – IBM</li>
       <li>Programming Essentials in Python – Cisco</li>
       <li>Python (Basic) – HackerRank</li>
     </ul>
   </section>
-
+ 
   <section id="contact">
     <div class="section-title">
       <h2>Contact</h2>
-      <p>Let’s connect for internships, full-time opportunities, and collaborations.</p>
+      <p>Open to full-time roles in Data Analytics, Data Science, and Analytics Engineering.</p>
     </div>
-
+ 
     <div class="contact-box">
+      <p><strong>Phone:</strong> <a href="tel:+16563476008">+1 (656) 347-6008</a></p>
       <p><strong>Email:</strong> <a href="mailto:saanvireddybaradi@usf.edu">saanvireddybaradi@usf.edu</a></p>
       <p><strong>GitHub:</strong> <a href="https://github.com/saanvireddy" target="_blank">github.com/saanvireddy</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saanvi-reddy-baradi/" target="_blank">www.linkedin.com/in/saanvi-reddy-baradi</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saanvi-reddy-baradi/" target="_blank">linkedin.com/in/saanvi-reddy-baradi</a></p>
     </div>
   </section>
-
+ 
   <footer>
     © 2026 Saanvi Reddy Baradi | Portfolio
   </footer>
-
+ 
 </body>
 </html>
