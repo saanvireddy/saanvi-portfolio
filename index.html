@@ -423,7 +423,7 @@ footer {
     </div>
     <div class="hero-stats">
       <div>
-        <div class="stat-num">11<span>+</span></div>
+        <div class="stat-num">12<span>+</span></div>
         <div class="stat-label">Projects Shipped</div>
       </div>
       <div>
@@ -464,6 +464,7 @@ footer {
       <div class="skill-group-label">Data Engineering & Cloud</div>
       <div class="skill-chips">
         <span class="chip">SQL</span><span class="chip">Apache Spark</span><span class="chip">Kafka</span><span class="chip">Airflow</span><span class="chip">dbt</span><span class="chip">BigQuery</span><span class="chip">Pandas</span><span class="chip">ETL Pipeline Design</span><span class="chip">RapidFuzz (fuzzy matching)</span><span class="chip">CI/CD</span><span class="chip">REST API Integration</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Helm</span><span class="chip">Terraform</span><span class="chip">PostgreSQL</span><span class="chip">GCP</span><span class="chip">AWS EKS</span><span class="chip">Azure AKS</span>
+        <span class="chip">Snowflake</span><span class="chip">Databricks</span><span class="chip">Microsoft Azure</span>
       </div>
     </div>
     <div class="skill-group">
@@ -684,7 +685,23 @@ footer {
         <span class="tag">PySpark</span><span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span>
       </div>
     </div>
-
+    <!-- AI-Ready Lakehouse -->
+    <div class="project-card" data-cat="de">
+      <div class="project-card-top">
+        <span class="project-category cat-de">Data Engineering</span>
+        <a href="https://github.com/saanvireddy/ai-ready-lakehouse" target="_blank" class="project-link-icon">↗</a>
+      </div>
+      <div class="project-title">AI-Ready Real-Time Analytics Lakehouse</div>
+      <div class="project-desc">End-to-end lakehouse pipeline built to close a targeted skill gap. Real-time events flow from Kafka through Databricks (PySpark Structured Streaming), land in a clustered Snowflake warehouse with materialized views, and pass through a tested 3-layer dbt model — all orchestrated by Airflow with GitHub Actions running dbt tests on every push. A LangChain + Groq RAG layer sits on top, answering plain-English questions with LLM-generated SQL against the live warehouse.</div>
+      <div class="project-metrics">
+        <span class="metric">7-Stage Pipeline</span>
+        <span class="metric">CI/CD Automated</span>
+        <span class="metric">NL Query Layer</span>
+      </div>
+      <div class="project-tags">
+        <span class="tag">Kafka</span><span class="tag">Databricks</span><span class="tag">Snowflake</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">LangChain</span><span class="tag">Groq</span><span class="tag">GitHub Actions</span>
+      </div>
+    </div>
     <!-- Kafka Spark -->
     <div class="project-card" data-cat="de">
       <div class="project-card-top">
@@ -701,6 +718,7 @@ footer {
         <span class="tag">Apache Kafka</span><span class="tag">Spark Streaming</span><span class="tag">Docker</span><span class="tag">Parquet</span>
       </div>
     </div>
+    
 
   </div>
 </section>
