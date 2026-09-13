@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saanvi Reddy Baradi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,6 +109,11 @@
     transition:all .2s ease;
   }
   .icon-link:hover{border-color:var(--accent);color:var(--accent-strong);background:var(--accent-tint);}
+  .nav-resume{
+    width:auto;border-radius:999px;padding:0 14px;
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.02em;
+    white-space:nowrap;
+  }
   @media (max-width:760px){
     nav.links{display:none;}
   }
@@ -326,6 +336,9 @@
   .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem;color:var(--ink-faint);}
   .foot-row .mono{color:var(--ink-soft);}
 </style>
+</head>
+<body>
+
 
 <div class="progress" id="progress"></div>
 
@@ -343,6 +356,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-icons">
+      <a class="icon-link nav-resume" href="Saanvi_Reddy_Baradi.pdf" target="_blank" rel="noopener" aria-label="Resume">Resume ↗</a>
       <a class="icon-link" href="https://www.linkedin.com/in/saanvi-reddy-baradi/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
       <a class="icon-link" href="https://github.com/saanvireddy" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
     </div>
@@ -367,6 +381,7 @@
         <div class="cta-row">
           <a class="btn btn-primary" href="#work">View selected work →</a>
           <a class="btn btn-outline" href="#experience">See experience</a>
+          <a class="btn btn-outline" href="resume.pdf" target="_blank" rel="noopener">Download resume ↓</a>
         </div>
         <div class="stat-ledger">
           <div class="stat"><span class="stat-num" data-target="13" data-suffix="+">0</span><span class="stat-label">AI / ML / Data Projects</span></div>
@@ -921,3 +936,5 @@
   }
 })();
 </script>
+</body>
+</html>
