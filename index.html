@@ -384,7 +384,7 @@
           <a class="btn btn-outline" href="resume.pdf" target="_blank" rel="noopener">Download resume ↓</a>
         </div>
         <div class="stat-ledger">
-          <div class="stat"><span class="stat-num" data-target="13" data-suffix="+">0</span><span class="stat-label">AI / ML / Data Projects</span></div>
+          <div class="stat"><span class="stat-num" data-target="14" data-suffix="+">0</span><span class="stat-label">AI / ML / Data Projects</span></div>
           <div class="stat"><span class="stat-num" data-target="3" data-suffix="+">0</span><span class="stat-label">Years Technical Exp.</span></div>
           <div class="stat"><span class="stat-num" data-target="3.95" data-decimals="2" data-suffix="/4">0</span><span class="stat-label">Graduate GPA</span></div>
           <div class="stat"><span class="stat-num" data-target="0.99" data-decimals="2">0</span><span class="stat-label">Best AUC-ROC</span></div>
@@ -406,7 +406,7 @@
         <div class="stack-card reveal">
           <div class="stack-head"><span class="stack-code">AI</span><span class="stack-name">AI &amp; Generative AI</span></div>
           <div class="tag-row">
-            <span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">Unsloth</span><span class="tag">Prompt Eng.</span><span class="tag">Embeddings</span><span class="tag">Pinecone</span><span class="tag">ChromaDB</span><span class="tag">pgvector</span><span class="tag">Ragas</span><span class="tag">FastAPI</span>
+            <span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">Unsloth</span><span class="tag">Prompt Eng.</span><span class="tag">Embeddings</span><span class="tag">Pinecone</span><span class="tag">ChromaDB</span><span class="tag">pgvector</span><span class="tag">Ragas</span><span class="tag">FastAPI</span><span class="tag">Ollama</span><span class="tag">LLM Guardrails</span><span class="tag">LLM-as-Judge Eval</span>
           </div>
         </div>
         <div class="stack-card reveal">
@@ -424,10 +424,15 @@
         <div class="stack-card reveal">
           <div class="stack-head"><span class="stack-code">CLD</span><span class="stack-name">Cloud &amp; Deployment</span></div>
           <div class="tag-row">
-            <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Helm</span><span class="tag">Terraform</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span><span class="tag">AWS EKS</span><span class="tag">Azure AKS</span><span class="tag">GCP</span><span class="tag">Azure</span>
+            <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Helm</span><span class="tag">Terraform</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span><span class="tag">AWS EKS</span><span class="tag">Azure AKS</span><span class="tag">GCP</span><span class="tag">Azure</span><span class="tag">AWS RDS · S3 · ECR</span><span class="tag">Secrets Manager</span><span class="tag">NGINX Ingress</span><span class="tag">HPA</span><span class="tag">Trivy</span>
           </div>
         </div>
         <div class="stack-card reveal">
+          <div class="stack-head"><span class="stack-code">OPS</span><span class="stack-name">LLMOps &amp; Observability</span></div>
+          <div class="tag-row">
+            <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span><span class="tag">Jaeger</span><span class="tag">Redis</span><span class="tag">JWT Auth</span><span class="tag">Rate Limiting</span><span class="tag">Locust</span><span class="tag">MRR / Hit-Rate</span>
+          </div>
+        </div>
           <div class="stack-head"><span class="stack-code">BI</span><span class="stack-name">Analytics &amp; BI</span></div>
           <div class="tag-row">
             <span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Streamlit</span><span class="tag">DAX</span><span class="tag">A/B Testing</span><span class="tag">Cohort Analysis</span><span class="tag">RFM Segmentation</span>
@@ -441,7 +446,7 @@
     <div class="container">
       <div class="eyebrow">INDEX / 02 · SELECTED WORK</div>
       <h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem);">AI systems, data platforms &amp; applied ML.</h2>
-      <p class="lede">A selection of thirteen projects across LLMs, RAG, agentic AI, machine learning, analytics, and production-oriented data engineering.</p>
+      <p class="lede">A selection of fourteen projects across LLMs, RAG, agentic AI, machine learning, analytics, and production-oriented data engineering.</p>
 
       <div class="filter-row" id="filterRow">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -452,6 +457,18 @@
       </div>
 
       <div class="project-grid" id="projectGrid">
+        <article class="card reveal" data-cat="genai">
+          <div class="card-top">
+            <span class="card-cat">Featured · Agentic AI Platform</span>
+            <div class="card-links">
+              <a class="icon-link" href="https://github.com/saanvireddy/production-agentic-ai" target="_blank" rel="noopener" aria-label="Repository">↗</a>
+            </div>
+          </div>
+          <h3>Production-Oriented Agentic AI Platform</h3>
+          <p class="card-desc">Enterprise knowledge and analytics assistant where a LangGraph agent routes each question to a RAG tool (pgvector, page-level citations) or a guarded text-to-SQL tool, with Redis conversational memory and answer grounding checks. Built for production: JWT auth, rate limiting, AST-level SQL guardrails with read-only transactions, a 3-layer evaluation pipeline in CI (retrieval metrics, SQL execution accuracy, Ragas LLM-as-judge), Prometheus/Grafana and OpenTelemetry tracing, Kubernetes with Helm, NGINX Ingress and HPA, and AWS infrastructure in Terraform. Runs fully on local open-source models via Ollama for $0.</p>
+          <div class="metric-row"><span class="metric">Hit-Rate@4 1.00 · MRR 0.96</span><span class="metric">Faithfulness 0.69</span><span class="metric">SQL Exec. Acc. 70% (3B)</span><span class="metric">93 Tests · CI Green</span></div>
+          <div class="tag-row"><span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">pgvector</span><span class="tag">Ollama</span><span class="tag">FastAPI</span><span class="tag">Redis</span><span class="tag">Ragas</span><span class="tag">Prometheus</span><span class="tag">OpenTelemetry</span><span class="tag">Kubernetes</span><span class="tag">Helm</span><span class="tag">Terraform</span></div>
+        </article>
 
         <article class="card reveal" data-cat="genai">
           <div class="card-top">
@@ -759,7 +776,7 @@
 <footer>
   <div class="container foot-row">
     <span class="mono">SAANVI REDDY BARADI</span>
-    <span>AI Engineer · GenAI · LLMs · Data Engineering</span>
+    <span>AI Engineer · GenAI · Agentic AI · LLM</span>
     <span class="mono">© 2026</span>
   </div>
 </footer>
